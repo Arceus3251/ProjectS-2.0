@@ -1,5 +1,6 @@
 package com.DPN.ProjectS;
 
+import com.DPN.ProjectS.proxy.ClientProxy;
 import com.DPN.ProjectS.proxy.CommonProxy;
 import com.DPN.ProjectS.util.Reference;
 import net.minecraftforge.fml.common.Mod;
@@ -15,8 +16,8 @@ public class Main {
     @Instance
     public static Main instance;
 
-    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
-    public static CommonProxy proxy;
+    public static CommonProxy commonProxy = new CommonProxy();
+    public static ClientProxy clientProxy = new ClientProxy();
 
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event){

@@ -1,12 +1,12 @@
 [
 {
-"modid": "ps",
+"modid": "psm",
 "name": "Project S",
 "description": "AAAAAA",
-"version": "",
-"credits": "My left nut",
-"logoFile": "",
-"mcversion": "",
+"version": "0.1a",
+"credits": "Original idea by UncleMion",
+"logoFile": "/assets/psm/Logo/projectslogo.png",
+"mcversion": "1.12.2",
 "url": "",
 "updateUrl": "",
 "authors": [ "Arceus3251", "DigiDuncan" ],
