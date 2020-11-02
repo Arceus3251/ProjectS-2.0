@@ -1,16 +1,19 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+"modid": "ps",
+"name": "Project S",
+"description": "AAAAAA",
+"version": "",
+"credits": "My left nut",
+"logoFile": "",
+"mcversion": "",
+"url": "",
+"updateUrl": "",
+"authors": [ "Arceus3251", "DigiDuncan" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+"mod_MinecraftForge"
+]
 }
 ]
