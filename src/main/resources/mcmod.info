@@ -1,19 +1,12 @@
-[
-{
-"modid": "psm",
-"name": "Project S",
-"description": "AAAAAA",
-"version": "0.1a",
-"credits": "Original idea by UncleMion",
-"logoFile": "/assets/psm/Logo/projectslogo.png",
-"mcversion": "1.12.2",
-"url": "",
-"updateUrl": "",
-"authors": [ "Arceus3251", "DigiDuncan" ],
-"parent":"",
-"screenshots": [],
-"dependencies": [
-"mod_MinecraftForge"
-]
-}
-]
+[{
+	"modid": "psm",
+	"name": "Project S",
+	"description": "The Revival of the Gulliver Mod for modern Minecraft",
+	"version": "0.1a",
+	"credits": "Original idea by UncleMion",
+	"authorList": ["Arceus3251", "DigiDuncan"],
+	"logoFile": "/assets/psm/Logo/projectslogo.png",
+	"dependencies": [
+		"mod_MinecraftForge"
+	]
+}]
