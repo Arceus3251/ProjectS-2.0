@@ -1,4 +1,8 @@
+//Follow the templates below.
+
 //Items
 item.placeholder_banana.name=Placeholder Banana
+
+
 //Blocks
 tile.placeholder_block.name=Placeholder Block
