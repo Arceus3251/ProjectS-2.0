@@ -1,5 +1,6 @@
 package com.DPN.ProjectS.util.handlers;
 
+import com.DPN.ProjectS.commands.CommandChangeHeight;
 import com.DPN.ProjectS.init.ModBlocks;
 import com.DPN.ProjectS.init.ModItems;
 import com.DPN.ProjectS.util.IHasModel;
@@ -8,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
@@ -34,6 +36,9 @@ public class RegistryHandler {
                 ((IHasModel)block).registerModels();
             }
         }
+    }
+    public static void serverRegistries(FMLServerStartingEvent event){
+        event.registerServerCommand(new CommandChangeHeight());
     }
 
 
