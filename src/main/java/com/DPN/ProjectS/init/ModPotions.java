@@ -23,10 +23,14 @@ public class ModPotions {
     public static final PotionType SHRINKING_POTION = new PotionType("shrinking", new PotionEffect[] {new PotionEffect(SHRINKING, 2400)}).setRegistryName("shrinking");
     public static final PotionType LONG_SHRINKING_POTION = new PotionType("shrinking", new PotionEffect[] {new PotionEffect(SHRINKING, 4800)}).setRegistryName("long_shrinking");
 
-    public static final Potion GROWING_POTION = new PotionProjectS("growing", false, 0x00ff00, 1, 0);
+    public static final Potion GROWING = new PotionProjectS("growing", false, 0x00ff00, 1, 0);
+
+    public static final PotionType GROWING_POTION = new PotionType("growing", new PotionEffect[] {new PotionEffect(GROWING, 2400)}).setRegistryName("growing");
+    public static final PotionType LONG_GROWING_POTION = new PotionType("growing", new PotionEffect[] {new PotionEffect(GROWING, 2400)}).setRegistryName("long_growing");
 
     public static void registerPotions(){
         registerPotion(SHRINKING_POTION, LONG_SHRINKING_POTION, SHRINKING);
+        registerPotion(GROWING_POTION, LONG_GROWING_POTION, GROWING);
         registerPotionMixes();
     }
     private static void registerPotion(PotionType defaultPotion, PotionType longPotion, Potion effect){

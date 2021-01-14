@@ -8,6 +8,7 @@ import com.DPN.ProjectS.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -39,6 +40,12 @@ public class RegistryHandler {
             }
         }
     }
+
+    @SubscribeEvent
+    public static void onPotionRegister(RegistryEvent.Register<PotionType> event){
+        ModPotions.registerPotions();
+    }
+
     public static void serverRegistries(FMLServerStartingEvent event){
         event.registerServerCommand(new CommandChangeHeight());
     }

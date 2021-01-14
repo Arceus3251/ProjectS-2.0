@@ -11,3 +11,10 @@ tile.placeholder_block.name=Placeholder Block
 //Potions
 effect.shrinking=Shrinking
 potion.effect.shrinking=Potion of Shrinking
+splash_potion.effect.shrinking=Splash Potion of Shrinking
+lingering_potion.effect.shrinking=Lingering Potion of Shrinking
+
+effect.growing=Growing
+potion.effect.growing=Potion of Growing
+splash_potion.effect.growing=Splash Potion of Growing
+lingering_potion.effect.growing=Lingering Potion of Growing
