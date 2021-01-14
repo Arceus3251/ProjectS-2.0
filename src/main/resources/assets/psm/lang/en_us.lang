@@ -6,3 +6,8 @@ item.placeholder_banana.name=Placeholder Banana
 
 //Blocks
 tile.placeholder_block.name=Placeholder Block
+
+
+//Potions
+effect.shrinking=Shrinking
+potion.effect.shrinking=Potion of Shrinking

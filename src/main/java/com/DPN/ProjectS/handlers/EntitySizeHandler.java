@@ -114,7 +114,7 @@ public class EntitySizeHandler {
                         PacketHandler.INSTANCE.sendToAll(
                                 new MessageSizeChange(size.getBaseSize(), size.getScale(), entity.getEntityId()));
                     }
-                    updateSizePotionEffects(entity, size);
+                    //updateSizePotionEffects(entity, size);
                 }
 
                 if (size.getMorphTime() > 0 && size.getMaxMorphTime() > 0) {
@@ -138,6 +138,7 @@ public class EntitySizeHandler {
                     float width = dims.getFirst() * size.getActualSize();
                     float height = dims.getSecond() * size.getActualSize();
                     setEntitySize(entity, width, height);
+
                 } else {
                     if (!initializedPlayers.contains(entity)) {
                         initializedPlayers.add((EntityPlayer) entity);
@@ -347,12 +348,11 @@ public class EntitySizeHandler {
         }
     }
 
-    /*
-     * @SubscribeEvent public static void
-     * playerVisibility(PlayerEvent.Visibility event) {
-     * event.modifyVisibility(EntitySizeUtil.getEntityScaleRootDouble(event.
-     * getEntityPlayer())); }
-     */
+
+     @SubscribeEvent public static void  playerVisibility(PlayerEvent.Visibility event) {
+     event.modifyVisibility(EntitySizeUtil.getEntityScaleRootDouble(event.
+     getEntityPlayer())); }
+
 
     @SubscribeEvent
     public static void trySleep(PlayerSleepInBedEvent event) {
@@ -430,7 +430,6 @@ public class EntitySizeHandler {
             float f1 = entity.height;
             entity.width = width;
             entity.height = height;
-
             if (entity.width < f) {
                 AxisAlignedBB axisalignedbb = entity.getEntityBoundingBox();
                 if (!entity.world.isRemote) {
@@ -443,17 +442,17 @@ public class EntitySizeHandler {
             }
 
             AxisAlignedBB axisalignedbb = entity.getEntityBoundingBox();
-            // entity.setEntityBoundingBox(new AxisAlignedBB(axisalignedbb.minX,
-            // axisalignedbb.minY, axisalignedbb.minZ, axisalignedbb.minX +
-            // (double) entity.width, axisalignedbb.minY + (double)
-            // entity.height, axisalignedbb.minZ + (double) entity.width));
+            entity.setEntityBoundingBox(new AxisAlignedBB(axisalignedbb.minX,
+            axisalignedbb.minY, axisalignedbb.minZ, axisalignedbb.minX +
+            (double) entity.width, axisalignedbb.minY + (double)
+            entity.height, axisalignedbb.minZ + (double) entity.width));
             double d0 = (double) width / 2.0D;
             entity.setEntityBoundingBox(new AxisAlignedBB(entity.posX - d0, entity.posY, entity.posZ - d0,
                     entity.posX + d0, entity.posY + (double) entity.height, entity.posZ + d0));
         }
     }
 
-    private static void updateSizePotionEffects(EntityLivingBase entity, ISizeCapability size) {
+    /*private static void updateSizePotionEffects(EntityLivingBase entity, ISizeCapability size) {
         int prevShrinkingAmp = shrinkingAmps.containsKey(entity) ? shrinkingAmps.get(entity)
                 : (entity.getActivePotionEffect(PotionProjectS.SHRINKING_POTION) != null)
                 ? entity.getActivePotionEffect(PotionProjectS.SHRINKING_POTION).getAmplifier() : -1;
@@ -524,7 +523,7 @@ public class EntitySizeHandler {
             shrinkingAmps.put(entity, shrinkingAmp);
             growingAmps.put(entity, growingAmp);
         }
-    }
+    }*/
 
     private static void pushPlayerSPOutOfBlocks(EntityPlayer player, double x, double y, double z) {
         if (player.noClip) {
